@@ -2636,46 +2636,6 @@ local GEM_SPELLS = {
         class = 6,  -- Death Knight
         {spell = 56815, level = 67},
     },
-    [5446] = {
-        class = 6,  -- Death Knight
-        {spell = 53341, level = 55},
-    },
-    [5447] = {
-        class = 6,  -- Death Knight
-        {spell = 53331, level = 60},
-    },
-    [5448] = {
-        class = 6,  -- Death Knight
-        {spell = 53343, level = 55},
-    },
-    [5449] = {
-        class = 6,  -- Death Knight
-        {spell = 54447, level = 57},
-    },
-    [5450] = {
-        class = 6,  -- Death Knight
-        {spell = 53342, level = 57},
-    },
-    [5451] = {
-        class = 6,  -- Death Knight
-        {spell = 54446, level = 63},
-    },
-    [5452] = {
-        class = 6,  -- Death Knight
-        {spell = 53323, level = 63},
-    },
-    [5453] = {
-        class = 6,  -- Death Knight
-        {spell = 53344, level = 70},
-    },
-    [5454] = {
-        class = 6,  -- Death Knight
-        {spell = 70164, level = 72},
-    },
-    [5455] = {
-        class = 6,  -- Death Knight
-        {spell = 62158, level = 72},
-    },
     [5458] = {
         class = 4,  -- Rogue
         {spell = 1943, level = 20},
@@ -4307,16 +4267,6 @@ local GEM_ITEMS = {
     [100625] = 5605,
     [100465] = 5445,
     [100476] = 5456,
-    [100466] = 5446,
-    [100467] = 5447,
-    [100468] = 5448,
-    [100469] = 5449,
-    [100470] = 5450,
-    [100471] = 5451,
-    [100472] = 5452,
-    [100473] = 5453,
-    [100474] = 5454,
-    [100475] = 5455,
     [100478] = 5458,
     [100479] = 5459,
     [100480] = 5460,

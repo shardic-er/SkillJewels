@@ -1,6 +1,6 @@
 # Skill Jewels
 
-Version 0.1.280 | TrinityCore 3.3.5a + Eluna Lua Engine
+Version 0.1.292 | TrinityCore 3.3.5a + Eluna Lua Engine
 
 Cross-class spell learning through gem socketing. Players socket gem items into
 gear to learn spells from other WoW classes. Removing the gem or unequipping the
@@ -11,6 +11,10 @@ Warlock, Priest, Warrior, Death Knight, Mage, Rogue). Each gem teaches the
 highest spell rank available for the player's level and auto-upgrades on
 level-up. Gems use real vanilla spell IDs, so talents, cooldowns, and C++
 spell scripts all work correctly.
+
+Each gem has a **class-colored icon** with a distinct shape per spec/talent tree
+(3 shapes x 10 classes = 30 unique icons). Icons are generated from
+class-colored gem art and packed into the client patch as DXT1-compressed BLPs.
 
 - **Trainer gems** (Rare/blue quality, 426 gems): Spells normally learned from
   class trainers

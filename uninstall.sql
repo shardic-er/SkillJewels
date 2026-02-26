@@ -1,7 +1,7 @@
 -- =============================================================================
 -- UNINSTALL: World of Stonecraft
--- Version: 0.1.279
--- Generated: 2026-02-25T22:14:39.276327
+-- Version: 0.1.280
+-- Generated: 2026-02-25T22:22:24.153069
 -- =============================================================================
 -- This removes ONLY the exact rows inserted by this build.
 -- No other content will be affected.

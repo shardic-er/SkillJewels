@@ -1,1 +1,3 @@
+SkillJewels/icons/Interface/AddOns/SkillJewels/SkillJewels.lua
+SkillJewels/icons/Interface/AddOns/SkillJewels/SkillJewelsData.lua
 SkillJewels/scripts/skill_jewels.lua

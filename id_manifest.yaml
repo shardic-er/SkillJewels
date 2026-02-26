@@ -1,9 +1,9 @@
 module:
   name: World of Stonecraft
-  version: 0.1.292
+  version: 0.1.296
   author: Go
   description: A Stoneworking profession.
-generated: '2026-02-26T12:46:24.712258'
+generated: '2026-02-26T14:48:26.246874'
 id_bases:
   creature: 100000
   item: 100000

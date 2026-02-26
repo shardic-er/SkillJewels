@@ -1,6 +1,6 @@
 # Skill Jewels
 
-Version 0.1.292 | TrinityCore 3.3.5a + Eluna Lua Engine
+Version 0.1.296 | TrinityCore 3.3.5a + Eluna Lua Engine
 
 Cross-class spell learning through gem socketing. Players socket gem items into
 gear to learn spells from other WoW classes. Removing the gem or unequipping the

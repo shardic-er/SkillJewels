@@ -1,0 +1,1310 @@
+SKILL JEWELS - MERGED SPELL ANALYSIS
+==============================================================================
+
+DATA SOURCES
+------------------------------------------------------------------------------
+1. trainer_spell:                     471 unique spell names
+2. Talent.dbc (single-rank):          170 spells
+   - Merge into trainer chains:        43
+   - Standalone (new gems):            127
+3. playercreateinfo_spell_custom:      427 spells checked
+   - Already covered:                  417
+   - New (not in trainers/talents):    10 unique names
+4. quest_template (RewardSpell):       3 spells checked
+   - Already covered:                  3
+   - New:                              0 unique names
+5. SkillLineAbility.dbc (class tabs):  1849 spells checked
+   - Already covered:                  1776
+   - New:                              25 unique names
+
+TOTAL GEMS AFTER MERGE:               633
+  471 trainer + 127 talent + 10 auto + 0 quest + 25 sla
+
+Excluded by config:                   205
+  Config: content/SkillJewels/gem_exclusions.yaml
+
+==============================================================================
+SECTION 1: TRAINER SPELLS (471 gems)
+Full rank chains from trainer data.
+==============================================================================
+
+Warrior (37)
+--------------------------------------------------
+  Battle Shout
+  Berserker Rage
+  Bloodrage
+  Challenging Shout
+  Charge
+  Cleave
+  Commanding Shout
+  Demoralizing Shout
+  Devastate
+  Disarm
+  Enraged Regeneration
+  Execute
+  Hamstring
+  Heroic Strike
+  Heroic Throw
+  Intercept
+  Intervene
+  Intimidating Shout
+  Mocking Blow
+  Mortal Strike
+  Overpower
+  Pummel
+  Recklessness
+  Rend
+  Retaliation
+  Revenge
+  Shattering Throw
+  Shield Bash
+  Shield Block
+  Shield Slam
+  Shield Wall
+  Slam
+  Spell Reflection
+  Stance Mastery
+  Thunder Clap
+  Victory Rush
+  Whirlwind
+
+Paladin (52)
+--------------------------------------------------
+  Avenger's Shield
+  Avenging Wrath
+  Blessing of Kings
+  Blessing of Might
+  Blessing of Wisdom
+  Cleanse
+  Concentration Aura
+  Consecration
+  Crusader Aura
+  Devotion Aura
+  Divine Intervention
+  Divine Plea
+  Divine Protection
+  Divine Shield
+  Exorcism
+  Fire Resistance Aura
+  Flash of Light
+  Frost Resistance Aura
+  Greater Blessing of Kings
+  Greater Blessing of Might
+  Greater Blessing of Sanctuary
+  Greater Blessing of Wisdom
+  Hammer of Justice
+  Hammer of Wrath
+  Hand of Freedom
+  Hand of Protection
+  Hand of Reckoning
+  Hand of Sacrifice
+  Hand of Salvation
+  Holy Light
+  Holy Shield
+  Holy Shock
+  Holy Wrath
+  Judgement
+  Judgement of Justice
+  Judgement of Wisdom
+  Lay on Hands
+  Purify
+  Redemption
+  Retribution Aura
+  Righteous Defense
+  Righteous Fury
+  Sacred Shield
+  Seal of Corruption
+  Seal of Justice
+  Seal of Light
+  Seal of Vengeance
+  Seal of Wisdom
+  Sense Undead
+  Shadow Resistance Aura
+  Shield of Righteousness
+  Turn Evil
+
+Hunter (55)
+--------------------------------------------------
+  Aimed Shot
+  Arcane Shot
+  Aspect of the Beast
+  Aspect of the Cheetah
+  Aspect of the Dragonhawk
+  Aspect of the Hawk
+  Aspect of the Monkey
+  Aspect of the Pack
+  Aspect of the Viper
+  Aspect of the Wild
+  Beast Lore
+  Black Arrow
+  Concussive Shot
+  Counterattack
+  Deterrence
+  Disengage
+  Distracting Shot
+  Eagle Eye
+  Explosive Shot
+  Explosive Trap
+  Eyes of the Beast
+  Feign Death
+  Flare
+  Freezing Arrow
+  Freezing Trap
+  Frost Trap
+  Hunter's Mark
+  Immolation Trap
+  Kill Command
+  Kill Shot
+  Master's Call
+  Mend Pet
+  Misdirection
+  Mongoose Bite
+  Multi-Shot
+  Rapid Fire
+  Raptor Strike
+  Scare Beast
+  Scorpid Sting
+  Serpent Sting
+  Snake Trap
+  Steady Shot
+  Track Beasts
+  Track Demons
+  Track Dragonkin
+  Track Elementals
+  Track Giants
+  Track Hidden
+  Track Humanoids  [+Druid]
+  Track Undead
+  Tranquilizing Shot
+  Viper Sting
+  Volley
+  Wing Clip
+  Wyvern Sting
+
+Rogue (34)
+--------------------------------------------------
+  Ambush
+  Backstab
+  Blind
+  Cheap Shot
+  Cloak of Shadows
+  Deadly Throw
+  Detect Traps
+  Disarm Trap
+  Dismantle
+  Distract
+  Envenom
+  Evasion
+  Eviscerate
+  Expose Armor
+  Fan of Knives
+  Feint
+  Garrote
+  Gouge
+  Hemorrhage
+  Kick
+  Kidney Shot
+  Mutilate
+  Pick Lock
+  Pick Pocket
+  Rupture
+  Safe Fall
+  Sap
+  Shiv
+  Sinister Strike
+  Slice and Dice
+  Sprint
+  Stealth
+  Tricks of the Trade
+  Vanish
+
+Priest (48)
+--------------------------------------------------
+  Abolish Disease
+  Binding Heal
+  Circle of Healing
+  Cure Disease
+  Desperate Prayer
+  Devouring Plague
+  Dispel Magic
+  Divine Hymn
+  Divine Spirit
+  Fade
+  Fear Ward
+  Flash Heal
+  Greater Heal
+  Heal
+  Holy Fire
+  Holy Nova
+  Hymn of Hope
+  Inner Fire
+  Lesser Heal
+  Levitate
+  Lightwell
+  Mana Burn
+  Mark of the Wild  [+Druid]
+  Mass Dispel
+  Mind Blast
+  Mind Control
+  Mind Flay
+  Mind Sear
+  Mind Soothe
+  Mind Vision
+  Penance
+  Power Word: Fortitude
+  Power Word: Shield
+  Prayer of Fortitude
+  Prayer of Healing
+  Prayer of Mending
+  Prayer of Shadow Protection
+  Prayer of Spirit
+  Psychic Scream
+  Renew
+  Resurrection
+  Shackle Undead
+  Shadow Protection
+  Shadow Word: Death
+  Shadow Word: Pain
+  Shadowfiend
+  Smite
+  Vampiric Touch
+
+Death Knight (41)
+--------------------------------------------------
+  Anti-Magic Shell
+  Army of the Dead
+  Blood Boil
+  Blood Strike
+  Blood Tap
+  Chains of Ice
+  Corpse Explosion
+  Dark Command
+  Death Coil  [+Warlock]
+  Death Pact
+  Death Strike
+  Death and Decay
+  Empower Rune Weapon
+  Frost Presence
+  Frost Strike
+  Heart Strike
+  Horn of Winter
+  Howling Blast
+  Icebound Fortitude
+  Icy Touch
+  Mind Freeze
+  Obliterate
+  Path of Frost
+  Pestilence
+  Plague Strike
+  Raise Ally
+  Raise Dead
+  Rune Strike
+  Rune of Cinderglacier
+  Rune of Lichbane
+  Rune of Razorice
+  Rune of Spellbreaking
+  Rune of Spellshattering
+  Rune of Swordbreaking
+  Rune of Swordshattering
+  Rune of the Fallen Crusader
+  Rune of the Nerubian Carapace
+  Rune of the Stoneskin Gargoyle
+  Scourge Strike
+  Strangulate
+  Unholy Presence
+
+Shaman (58)
+--------------------------------------------------
+  Ancestral Spirit
+  Astral Recall
+  Bloodlust
+  Call of the Ancestors
+  Call of the Elements
+  Call of the Spirits
+  Chain Heal
+  Chain Lightning
+  Cleansing Totem
+  Cure Toxins
+  Earth Elemental Totem
+  Earth Shield
+  Earth Shock
+  Earthbind Totem
+  Earthliving Weapon
+  Far Sight
+  Fire Elemental Totem
+  Fire Nova
+  Fire Resistance Totem
+  Flame Shock
+  Flametongue Totem
+  Flametongue Weapon
+  Frost Resistance Totem
+  Frost Shock
+  Frostbrand Weapon
+  Ghost Wolf
+  Grounding Totem
+  Healing Stream Totem
+  Healing Wave
+  Heroism
+  Hex
+  Lava Burst
+  Lesser Healing Wave
+  Lightning Bolt
+  Lightning Shield
+  Magma Totem
+  Mana Spring Totem
+  Nature Resistance Totem
+  Purge
+  Reincarnation
+  Riptide
+  Rockbiter Weapon
+  Searing Totem
+  Sentry Totem
+  Stoneclaw Totem
+  Stoneskin Totem
+  Strength of Earth Totem
+  Thunderstorm
+  Totem of Wrath
+  Totemic Recall
+  Tremor Totem
+  Water Breathing
+  Water Shield
+  Water Walking
+  Wind Shear
+  Windfury Totem
+  Windfury Weapon
+  Wrath of Air Totem
+
+Mage (41)
+--------------------------------------------------
+  Amplify Magic
+  Arcane Barrage
+  Arcane Blast
+  Arcane Brilliance
+  Arcane Explosion
+  Arcane Intellect
+  Arcane Missiles
+  Blast Wave
+  Blink
+  Blizzard
+  Cone of Cold
+  Counterspell
+  Dampen Magic
+  Dragon's Breath
+  Evocation
+  Fire Blast
+  Fire Ward
+  Fireball
+  Flamestrike
+  Frost Armor
+  Frost Nova
+  Frost Ward
+  Frostbolt
+  Frostfire Bolt
+  Ice Armor
+  Ice Barrier
+  Ice Block
+  Ice Lance
+  Invisibility
+  Living Bomb
+  Mage Armor
+  Mana Shield
+  Mirror Image
+  Molten Armor
+  Polymorph
+  Pyroblast
+  Remove Curse  [+Druid]
+  Ritual of Refreshment
+  Scorch
+  Slow Fall
+  Spellsteal
+
+Warlock (46)
+--------------------------------------------------
+  Banish
+  Chaos Bolt
+  Corruption
+  Curse of Agony
+  Curse of Doom
+  Curse of Tongues
+  Curse of Weakness
+  Curse of the Elements
+  Dark Pact
+  Death Coil  [+Death Knight]
+  Demon Armor
+  Demon Skin
+  Demonic Circle: Summon
+  Demonic Circle: Teleport
+  Detect Invisibility
+  Drain Life
+  Drain Mana
+  Drain Soul
+  Enslave Demon
+  Eye of Kilrogg
+  Fear
+  Fel Armor
+  Haunt
+  Health Funnel
+  Hellfire
+  Howl of Terror
+  Immolate
+  Incinerate
+  Life Tap
+  Rain of Fire
+  Ritual of Souls
+  Ritual of Summoning
+  Searing Pain
+  Seed of Corruption
+  Sense Demons
+  Shadow Bolt
+  Shadow Ward
+  Shadowburn
+  Shadowflame
+  Shadowfury
+  Soul Fire
+  Soulshatter
+  Summon Felsteed
+  Summon Imp
+  Unending Breath
+  Unstable Affliction
+
+Druid (63)
+--------------------------------------------------
+  Abolish Poison
+  Aquatic Form
+  Barkskin
+  Bash
+  Cat Form
+  Challenging Roar
+  Claw
+  Cower
+  Cyclone
+  Dash
+  Demoralizing Roar
+  Dire Bear Form
+  Enrage
+  Entangling Roots
+  Faerie Fire
+  Faerie Fire (Feral)
+  Feline Grace
+  Ferocious Bite
+  Flight Form
+  Frenzied Regeneration
+  Gift of the Wild
+  Healing Touch
+  Hibernate
+  Hurricane
+  Innervate
+  Insect Swarm
+  Lacerate
+  Lifebloom
+  Maim
+  Mangle (Bear)
+  Mangle (Cat)
+  Mark of the Wild  [+Priest]
+  Maul
+  Moonfire
+  Nature's Grasp
+  Nourish
+  Pounce
+  Prowl
+  Rake
+  Ravage
+  Rebirth
+  Regrowth
+  Rejuvenation
+  Remove Curse  [+Mage]
+  Revive
+  Rip
+  Savage Defense
+  Savage Roar
+  Shred
+  Soothe Animal
+  Starfall
+  Starfire
+  Swift Flight Form
+  Swipe (Bear)
+  Swipe (Cat)
+  Thorns
+  Tiger's Fury
+  Track Humanoids  [+Hunter]
+  Tranquility
+  Travel Form
+  Typhoon
+  Wild Growth
+  Wrath
+
+
+==============================================================================
+SECTION 2: TALENT SPELLS NEEDING MERGE (43)
+Rank 1 from talents; higher ranks at trainers.
+These merge into existing trainer gems (no new gems needed).
+==============================================================================
+
+  Corpse Explosion [Death Knight/Unholy]
+    TALENT: Spell 49158, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 51325, Level 60 (Rank 2)
+    TRAINER: Spell 51326, Level 70 (Rank 3)
+    TRAINER: Spell 51327, Level 75 (Rank 4)
+    TRAINER: Spell 51328, Level 80 (Rank 5)
+
+  Frost Strike [Death Knight/Frost]
+    TALENT: Spell 49143, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 51416, Level 60 (Rank 2)
+    TRAINER: Spell 51417, Level 65 (Rank 3)
+    TRAINER: Spell 51418, Level 70 (Rank 4)
+    TRAINER: Spell 51419, Level 75 (Rank 5)
+    TRAINER: Spell 55268, Level 80 (Rank 6)
+
+  Heart Strike [Death Knight/Blood]
+    TALENT: Spell 55050, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 55258, Level 59 (Rank 2)
+    TRAINER: Spell 55259, Level 64 (Rank 3)
+    TRAINER: Spell 55260, Level 69 (Rank 4)
+    TRAINER: Spell 55261, Level 74 (Rank 5)
+    TRAINER: Spell 55262, Level 80 (Rank 6)
+
+  Howling Blast [Death Knight/Frost]
+    TALENT: Spell 49184, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 51409, Level 70 (Rank 2)
+    TRAINER: Spell 51410, Level 75 (Rank 3)
+    TRAINER: Spell 51411, Level 80 (Rank 4)
+
+  Scourge Strike [Death Knight/Unholy]
+    TALENT: Spell 55090, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 55265, Level 67 (Rank 2)
+    TRAINER: Spell 55270, Level 73 (Rank 3)
+    TRAINER: Spell 55271, Level 79 (Rank 4)
+
+  Insect Swarm [Druid/Balance]
+    TALENT: Spell 5570, Level 30 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 24974, Level 30 (Rank 2)
+    TRAINER: Spell 24975, Level 40 (Rank 3)
+    TRAINER: Spell 24976, Level 50 (Rank 4)
+    TRAINER: Spell 24977, Level 60 (Rank 5)
+    TRAINER: Spell 27013, Level 70 (Rank 6)
+    TRAINER: Spell 48468, Level 80 (Rank 7)
+
+  Starfall [Druid/Balance]
+    TALENT: Spell 48505, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 53199, Level 70 (Rank 2)
+    TRAINER: Spell 53200, Level 75 (Rank 3)
+    TRAINER: Spell 53201, Level 80 (Rank 4)
+
+  Typhoon [Druid/Balance]
+    TALENT: Spell 50516, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 53223, Level 60 (Rank 2)
+    TRAINER: Spell 53225, Level 70 (Rank 3)
+    TRAINER: Spell 53226, Level 75 (Rank 4)
+    TRAINER: Spell 61384, Level 80 (Rank 5)
+
+  Wild Growth [Druid/Restoration]
+    TALENT: Spell 48438, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 53248, Level 70 (Rank 2)
+    TRAINER: Spell 53249, Level 75 (Rank 3)
+    TRAINER: Spell 53251, Level 80 (Rank 4)
+
+  Aimed Shot [Hunter/Marksmanship]
+    TALENT: Spell 19434, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 20900, Level 28 (Rank 2)
+    TRAINER: Spell 20901, Level 36 (Rank 3)
+    TRAINER: Spell 20902, Level 44 (Rank 4)
+    TRAINER: Spell 20903, Level 52 (Rank 5)
+    TRAINER: Spell 20904, Level 60 (Rank 6)
+    TRAINER: Spell 27065, Level 70 (Rank 7)
+    TRAINER: Spell 49049, Level 75 (Rank 8)
+    TRAINER: Spell 49050, Level 80 (Rank 9)
+
+  Black Arrow [Hunter/Survival]
+    TALENT: Spell 3674, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 63668, Level 57 (Rank 2)
+    TRAINER: Spell 63669, Level 63 (Rank 3)
+    TRAINER: Spell 63670, Level 69 (Rank 4)
+    TRAINER: Spell 63671, Level 75 (Rank 5)
+    TRAINER: Spell 63672, Level 80 (Rank 6)
+
+  Counterattack [Hunter/Survival]
+    TALENT: Spell 19306, Level 30 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 20909, Level 42 (Rank 2)
+    TRAINER: Spell 20910, Level 54 (Rank 3)
+    TRAINER: Spell 27067, Level 66 (Rank 4)
+    TRAINER: Spell 48998, Level 72 (Rank 5)
+    TRAINER: Spell 48999, Level 78 (Rank 6)
+
+  Explosive Shot [Hunter/Survival]
+    TALENT: Spell 53301, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 60051, Level 70 (Rank 2)
+    TRAINER: Spell 60052, Level 75 (Rank 3)
+    TRAINER: Spell 60053, Level 80 (Rank 4)
+
+  Wyvern Sting [Hunter/Survival]
+    TALENT: Spell 19386, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 24132, Level 50 (Rank 2)
+    TRAINER: Spell 24133, Level 60 (Rank 3)
+    TRAINER: Spell 27068, Level 70 (Rank 4)
+    TRAINER: Spell 49011, Level 75 (Rank 5)
+    TRAINER: Spell 49012, Level 80 (Rank 6)
+
+  Arcane Barrage [Mage/Arcane]
+    TALENT: Spell 44425, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 44780, Level 70 (Rank 2)
+    TRAINER: Spell 44781, Level 80 (Rank 3)
+
+  Blast Wave [Mage/Fire]
+    TALENT: Spell 11113, Level 30 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 13018, Level 36 (Rank 2)
+    TRAINER: Spell 13019, Level 44 (Rank 3)
+    TRAINER: Spell 13020, Level 52 (Rank 4)
+    TRAINER: Spell 13021, Level 60 (Rank 5)
+    TRAINER: Spell 27133, Level 65 (Rank 6)
+    TRAINER: Spell 33933, Level 70 (Rank 7)
+    TRAINER: Spell 42944, Level 75 (Rank 8)
+    TRAINER: Spell 42945, Level 80 (Rank 9)
+
+  Dragon's Breath [Mage/Fire]
+    TALENT: Spell 31661, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 33041, Level 56 (Rank 2)
+    TRAINER: Spell 33042, Level 64 (Rank 3)
+    TRAINER: Spell 33043, Level 70 (Rank 4)
+    TRAINER: Spell 42949, Level 75 (Rank 5)
+    TRAINER: Spell 42950, Level 80 (Rank 6)
+
+  Ice Barrier [Mage/Frost]
+    TALENT: Spell 11426, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 13031, Level 46 (Rank 2)
+    TRAINER: Spell 13032, Level 52 (Rank 3)
+    TRAINER: Spell 13033, Level 58 (Rank 4)
+    TRAINER: Spell 27134, Level 64 (Rank 5)
+    TRAINER: Spell 33405, Level 70 (Rank 6)
+    TRAINER: Spell 43038, Level 75 (Rank 7)
+    TRAINER: Spell 43039, Level 80 (Rank 8)
+
+  Living Bomb [Mage/Fire]
+    TALENT: Spell 44457, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 55359, Level 70 (Rank 2)
+    TRAINER: Spell 55360, Level 80 (Rank 3)
+
+  Pyroblast [Mage/Fire]
+    TALENT: Spell 11366, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 12505, Level 24 (Rank 2)
+    TRAINER: Spell 12522, Level 30 (Rank 3)
+    TRAINER: Spell 12523, Level 36 (Rank 4)
+    TRAINER: Spell 12524, Level 42 (Rank 5)
+    TRAINER: Spell 12525, Level 48 (Rank 6)
+    TRAINER: Spell 12526, Level 54 (Rank 7)
+    TRAINER: Spell 18809, Level 60 (Rank 8)
+    TRAINER: Spell 27132, Level 66 (Rank 9)
+    TRAINER: Spell 33938, Level 70 (Rank 10)
+    TRAINER: Spell 42890, Level 73 (Rank 11)
+    TRAINER: Spell 42891, Level 77 (Rank 12)
+
+  Avenger's Shield [Paladin/Protection]
+    TALENT: Spell 31935, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 32699, Level 60 (Rank 2)
+    TRAINER: Spell 32700, Level 70 (Rank 3)
+    TRAINER: Spell 48826, Level 75 (Rank 4)
+    TRAINER: Spell 48827, Level 80 (Rank 5)
+
+  Holy Shield [Paladin/Protection]
+    TALENT: Spell 20925, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 20927, Level 50 (Rank 2)
+    TRAINER: Spell 20928, Level 60 (Rank 3)
+    TRAINER: Spell 27179, Level 70 (Rank 4)
+    TRAINER: Spell 48951, Level 75 (Rank 5)
+    TRAINER: Spell 48952, Level 80 (Rank 6)
+
+  Holy Shock [Paladin/Holy]
+    TALENT: Spell 20473, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 20929, Level 48 (Rank 2)
+    TRAINER: Spell 20930, Level 56 (Rank 3)
+    TRAINER: Spell 27174, Level 64 (Rank 4)
+    TRAINER: Spell 33072, Level 70 (Rank 5)
+    TRAINER: Spell 48824, Level 75 (Rank 6)
+    TRAINER: Spell 48825, Level 80 (Rank 7)
+
+  Circle of Healing [Priest/Holy]
+    TALENT: Spell 34861, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 34863, Level 56 (Rank 2)
+    TRAINER: Spell 34864, Level 60 (Rank 3)
+    TRAINER: Spell 34865, Level 65 (Rank 4)
+    TRAINER: Spell 34866, Level 70 (Rank 5)
+    TRAINER: Spell 48088, Level 75 (Rank 6)
+    TRAINER: Spell 48089, Level 80 (Rank 7)
+
+  Desperate Prayer [Priest/Holy]
+    TALENT: Spell 19236, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 19238, Level 26 (Rank 2)
+    TRAINER: Spell 19240, Level 34 (Rank 3)
+    TRAINER: Spell 19241, Level 42 (Rank 4)
+    TRAINER: Spell 19242, Level 50 (Rank 5)
+    TRAINER: Spell 19243, Level 58 (Rank 6)
+    TRAINER: Spell 25437, Level 66 (Rank 7)
+    TRAINER: Spell 48172, Level 73 (Rank 8)
+    TRAINER: Spell 48173, Level 80 (Rank 9)
+
+  Lightwell [Priest/Holy]
+    TALENT: Spell 724, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 27870, Level 50 (Rank 2)
+    TRAINER: Spell 27871, Level 60 (Rank 3)
+    TRAINER: Spell 28275, Level 70 (Rank 4)
+    TRAINER: Spell 48086, Level 75 (Rank 5)
+    TRAINER: Spell 48087, Level 80 (Rank 6)
+
+  Mind Flay [Priest/Shadow]
+    TALENT: Spell 15407, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 17311, Level 28 (Rank 2)
+    TRAINER: Spell 17312, Level 36 (Rank 3)
+    TRAINER: Spell 17313, Level 44 (Rank 4)
+    TRAINER: Spell 17314, Level 52 (Rank 5)
+    TRAINER: Spell 18807, Level 60 (Rank 6)
+    TRAINER: Spell 25387, Level 68 (Rank 7)
+    TRAINER: Spell 48155, Level 74 (Rank 8)
+    TRAINER: Spell 48156, Level 80 (Rank 9)
+
+  Penance [Priest/Discipline]
+    TALENT: Spell 47540, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 53005, Level 70 (Rank 2)
+    TRAINER: Spell 53006, Level 75 (Rank 3)
+    TRAINER: Spell 53007, Level 80 (Rank 4)
+
+  Vampiric Touch [Priest/Shadow]
+    TALENT: Spell 34914, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 34916, Level 60 (Rank 2)
+    TRAINER: Spell 34917, Level 70 (Rank 3)
+    TRAINER: Spell 48159, Level 75 (Rank 4)
+    TRAINER: Spell 48160, Level 80 (Rank 5)
+
+  Hemorrhage [Rogue/Subtlety]
+    TALENT: Spell 16511, Level 30 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 17347, Level 46 (Rank 2)
+    TRAINER: Spell 17348, Level 58 (Rank 3)
+    TRAINER: Spell 26864, Level 70 (Rank 4)
+    TRAINER: Spell 48660, Level 80 (Rank 5)
+
+  Mutilate [Rogue/Assassination]
+    TALENT: Spell 1329, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 34411, Level 50 (Rank 2)
+    TRAINER: Spell 34412, Level 60 (Rank 3)
+    TRAINER: Spell 34413, Level 70 (Rank 4)
+    TRAINER: Spell 48663, Level 75 (Rank 5)
+    TRAINER: Spell 48666, Level 80 (Rank 6)
+
+  Earth Shield [Shaman/Restoration]
+    TALENT: Spell 974, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 32593, Level 60 (Rank 2)
+    TRAINER: Spell 32594, Level 70 (Rank 3)
+    TRAINER: Spell 49283, Level 75 (Rank 4)
+    TRAINER: Spell 49284, Level 80 (Rank 5)
+
+  Riptide [Shaman/Restoration]
+    TALENT: Spell 61295, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 61299, Level 70 (Rank 2)
+    TRAINER: Spell 61300, Level 75 (Rank 3)
+    TRAINER: Spell 61301, Level 80 (Rank 4)
+
+  Thunderstorm [Shaman/Elemental]
+    TALENT: Spell 51490, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 59156, Level 70 (Rank 2)
+    TRAINER: Spell 59158, Level 75 (Rank 3)
+    TRAINER: Spell 59159, Level 80 (Rank 4)
+
+  Totem of Wrath [Shaman/Elemental]
+    TALENT: Spell 30706, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 57720, Level 60 (Rank 2)
+    TRAINER: Spell 57721, Level 70 (Rank 3)
+    TRAINER: Spell 57722, Level 80 (Rank 4)
+
+  Chaos Bolt [Warlock/Destruction]
+    TALENT: Spell 50796, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 59170, Level 70 (Rank 2)
+    TRAINER: Spell 59171, Level 75 (Rank 3)
+    TRAINER: Spell 59172, Level 80 (Rank 4)
+
+  Dark Pact [Warlock/Affliction]
+    TALENT: Spell 18220, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 18937, Level 50 (Rank 2)
+    TRAINER: Spell 18938, Level 60 (Rank 3)
+    TRAINER: Spell 27265, Level 70 (Rank 4)
+    TRAINER: Spell 59092, Level 80 (Rank 5)
+
+  Haunt [Warlock/Affliction]
+    TALENT: Spell 48181, Level 60 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 59161, Level 70 (Rank 2)
+    TRAINER: Spell 59163, Level 75 (Rank 3)
+    TRAINER: Spell 59164, Level 80 (Rank 4)
+
+  Shadowburn [Warlock/Destruction]
+    TALENT: Spell 17877, Level 20 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 18867, Level 24 (Rank 2)
+    TRAINER: Spell 18868, Level 32 (Rank 3)
+    TRAINER: Spell 18869, Level 40 (Rank 4)
+    TRAINER: Spell 18870, Level 48 (Rank 5)
+    TRAINER: Spell 18871, Level 56 (Rank 6)
+    TRAINER: Spell 27263, Level 63 (Rank 7)
+    TRAINER: Spell 30546, Level 70 (Rank 8)
+    TRAINER: Spell 47826, Level 75 (Rank 9)
+    TRAINER: Spell 47827, Level 80 (Rank 10)
+
+  Shadowfury [Warlock/Destruction]
+    TALENT: Spell 30283, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 30413, Level 60 (Rank 2)
+    TRAINER: Spell 30414, Level 70 (Rank 3)
+    TRAINER: Spell 47846, Level 75 (Rank 4)
+    TRAINER: Spell 47847, Level 80 (Rank 5)
+
+  Unstable Affliction [Warlock/Affliction]
+    TALENT: Spell 30108, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 30404, Level 60 (Rank 2)
+    TRAINER: Spell 30405, Level 70 (Rank 3)
+    TRAINER: Spell 47841, Level 75 (Rank 4)
+    TRAINER: Spell 47843, Level 80 (Rank 5)
+
+  Devastate [Warrior/Protection]
+    TALENT: Spell 20243, Level 50 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 30016, Level 60 (Rank 2)
+    TRAINER: Spell 30022, Level 70 (Rank 3)
+    TRAINER: Spell 47497, Level 75 (Rank 4)
+    TRAINER: Spell 47498, Level 80 (Rank 5)
+
+  Mortal Strike [Warrior/Arms]
+    TALENT: Spell 12294, Level 40 (Rank 1)  <-- missing from trainer
+    TRAINER: Spell 21551, Level 48 (Rank 2)
+    TRAINER: Spell 21552, Level 54 (Rank 3)
+    TRAINER: Spell 21553, Level 60 (Rank 4)
+    TRAINER: Spell 25248, Level 66 (Rank 5)
+    TRAINER: Spell 30330, Level 70 (Rank 6)
+    TRAINER: Spell 47485, Level 75 (Rank 7)
+    TRAINER: Spell 47486, Level 80 (Rank 8)
+
+
+==============================================================================
+SECTION 3: STANDALONE TALENT SPELLS (127 new gems)
+No trainer ranks. Single-rank gems from talent tree.
+==============================================================================
+
+Warrior (16)
+--------------------------------------------------
+  [Arms] Anger Management (Spell 12296, Level 20)
+  [Arms] Bladestorm (Spell 46924, Level 60)
+  [Arms] Endless Rage (Spell 29623, Level 50)
+  [Arms] Juggernaut (Spell 64976, Level 45)
+  [Arms] Sweeping Strikes (Spell 12328, Level 30)
+  [Fury] Bloodthirst (Spell 23881, Level 40)
+  [Fury] Death Wish (Spell 12292, Level 30)
+  [Fury] Heroic Fury (Spell 60970, Level 50)
+  [Fury] Piercing Howl (Spell 12323, Level 20)
+  [Fury] Rampage (Spell 29801, Level 50)
+  [Fury] Titan's Grip (Spell 46917, Level 60)
+  [Protection] Concussion Blow (Spell 12809, Level 30)
+  [Protection] Last Stand (Spell 12975, Level 20)
+  [Protection] Shockwave (Spell 46968, Level 60)
+  [Protection] Vigilance (Spell 50720, Level 40)
+  [Protection] Warbringer (Spell 57499, Level 50)
+
+Paladin (12)
+--------------------------------------------------
+  [Holy] Aura Mastery (Spell 31821, Level 20)
+  [Holy] Beacon of Light (Spell 53563, Level 60)
+  [Holy] Divine Favor (Spell 20216, Level 30)
+  [Holy] Divine Illumination (Spell 31842, Level 50)
+  [Protection] Blessing of Sanctuary (Spell 20911, Level 30)
+  [Protection] Divine Sacrifice (Spell 64205, Level 20)
+  [Protection] Hammer of the Righteous (Spell 53595, Level 60)
+  [Retribution] Crusader Strike (Spell 35395, Level 50)
+  [Retribution] Divine Storm (Spell 53385, Level 60)
+  [Retribution] Repentance (Spell 20066, Level 40)
+  [Retribution] Sanctified Retribution (Spell 31869, Level 30)
+  [Retribution] Seal of Command (Spell 20375, Level 20)
+
+Hunter (10)
+--------------------------------------------------
+  [Beast Mastery] Aspect Mastery (Spell 53265, Level 20)
+  [Beast Mastery] Beast Mastery (Spell 53270, Level 60)
+  [Beast Mastery] Bestial Wrath (Spell 19574, Level 40)
+  [Beast Mastery] Intimidation (Spell 19577, Level 30)
+  [Beast Mastery] The Beast Within (Spell 34692, Level 50)
+  [Marksmanship] Chimera Shot (Spell 53209, Level 60)
+  [Marksmanship] Readiness (Spell 23989, Level 30)
+  [Marksmanship] Silencing Shot (Spell 34490, Level 50)
+  [Marksmanship] Trueshot Aura (Spell 19506, Level 40)
+  [Survival] Scatter Shot (Spell 19503, Level 20)
+
+Rogue (14)
+--------------------------------------------------
+  [Assassination] Cold Blood (Spell 14177, Level 30)
+  [Assassination] Hunger For Blood (Spell 51662, Level 60)
+  [Assassination] Overkill (Spell 58426, Level 40)
+  [Assassination] Vigor (Spell 14983, Level 20)
+  [Combat] Adrenaline Rush (Spell 13750, Level 40)
+  [Combat] Blade Flurry (Spell 13877, Level 30)
+  [Combat] Killing Spree (Spell 51690, Level 60)
+  [Combat] Riposte (Spell 14251, Level 20)
+  [Combat] Surprise Attacks (Spell 32601, Level 50)
+  [Subtlety] Ghostly Strike (Spell 14278, Level 20)
+  [Subtlety] Premeditation (Spell 14183, Level 40)
+  [Subtlety] Preparation (Spell 14185, Level 30)
+  [Subtlety] Shadow Dance (Spell 51713, Level 60)
+  [Subtlety] Shadowstep (Spell 36554, Level 50)
+
+Priest (11)
+--------------------------------------------------
+  [Discipline] Inner Focus (Spell 14751, Level 20)
+  [Discipline] Pain Suppression (Spell 33206, Level 50)
+  [Discipline] Power Infusion (Spell 10060, Level 40)
+  [Discipline] Soul Warding (Spell 63574, Level 30)
+  [Holy] Guardian Spirit (Spell 47788, Level 60)
+  [Holy] Spirit of Redemption (Spell 20711, Level 30)
+  [Shadow] Dispersion (Spell 47585, Level 60)
+  [Shadow] Psychic Horror (Spell 64044, Level 50)
+  [Shadow] Shadowform (Spell 15473, Level 40)
+  [Shadow] Silence (Spell 15487, Level 30)
+  [Shadow] Vampiric Embrace (Spell 15286, Level 30)
+
+Death Knight (16)
+--------------------------------------------------
+  [Blood] Dancing Rune Weapon (Spell 49028, Level 60)
+  [Blood] Hysteria (Spell 49016, Level 40)
+  [Blood] Mark of Blood (Spell 49005, Level 30)
+  [Blood] Rune Tap (Spell 48982, Level 20)
+  [Blood] Vampiric Blood (Spell 55233, Level 45)
+  [Frost] Deathchill (Spell 49796, Level 30)
+  [Frost] Hungering Cold (Spell 49203, Level 40)
+  [Frost] Improved Icy Talons (Spell 55610, Level 35)
+  [Frost] Lichborne (Spell 49039, Level 20)
+  [Frost] Unbreakable Armor (Spell 51271, Level 45)
+  [Unholy] Anti-Magic Zone (Spell 51052, Level 40)
+  [Unholy] Bone Shield (Spell 49222, Level 45)
+  [Unholy] Ghoul Frenzy (Spell 63560, Level 40)
+  [Unholy] Master of Ghouls (Spell 52143, Level 35)
+  [Unholy] Summon Gargoyle (Spell 49206, Level 60)
+  [Unholy] Unholy Blight (Spell 49194, Level 30)
+
+Shaman (14)
+--------------------------------------------------
+  [Elemental] Call of Thunder (Spell 16041, Level 30)
+  [Elemental] Elemental Focus (Spell 16164, Level 20)
+  [Elemental] Elemental Mastery (Spell 16166, Level 40)
+  [Enhancement] Dual Wield (Spell 30798, Level 40)
+  [Enhancement] Feral Spirit (Spell 51533, Level 60)
+  [Enhancement] Lava Lash (Spell 60103, Level 45)
+  [Enhancement] Shamanistic Focus (Spell 43338, Level 20)
+  [Enhancement] Shamanistic Rage (Spell 30823, Level 50)
+  [Enhancement] Spirit Weapons (Spell 16268, Level 30)
+  [Enhancement] Stormstrike (Spell 17364, Level 40)
+  [Restoration] Cleanse Spirit (Spell 51886, Level 40)
+  [Restoration] Mana Tide Totem (Spell 16190, Level 40)
+  [Restoration] Nature's Swiftness (Spell 16188, Level 30)
+  [Restoration] Tidal Force (Spell 55198, Level 20)
+
+Mage (9)
+--------------------------------------------------
+  [Arcane] Arcane Power (Spell 12042, Level 40)
+  [Arcane] Focus Magic (Spell 54646, Level 20)
+  [Arcane] Presence of Mind (Spell 12043, Level 30)
+  [Arcane] Slow (Spell 31589, Level 50)
+  [Fire] Combustion (Spell 11129, Level 40)
+  [Frost] Cold Snap (Spell 11958, Level 30)
+  [Frost] Deep Freeze (Spell 44572, Level 60)
+  [Frost] Icy Veins (Spell 12472, Level 20)
+  [Frost] Summon Water Elemental (Spell 31687, Level 50)
+
+Warlock (12)
+--------------------------------------------------
+  [Affliction] Amplify Curse (Spell 18288, Level 20)
+  [Affliction] Curse of Exhaustion (Spell 18223, Level 30)
+  [Affliction] Pandemic (Spell 58435, Level 50)
+  [Affliction] Siphon Life (Spell 63108, Level 30)
+  [Demonology] Demonic Empowerment (Spell 47193, Level 40)
+  [Demonology] Fel Domination (Spell 18708, Level 20)
+  [Demonology] Mana Feed (Spell 30326, Level 30)
+  [Demonology] Metamorphosis (Spell 59672, Level 60)
+  [Demonology] Soul Link (Spell 19028, Level 20)
+  [Demonology] Summon Felguard (Spell 30146, Level 50)
+  [Destruction] Conflagrate (Spell 17962, Level 40)
+  [Destruction] Devastation (Spell 18130, Level 30)
+
+Druid (13)
+--------------------------------------------------
+  [Balance] Force of Nature (Spell 33831, Level 50)
+  [Balance] Moonkin Form (Spell 24858, Level 40)
+  [Balance] Nature's Splendor (Spell 57865, Level 20)
+  [Feral Combat] Berserk (Spell 50334, Level 60)
+  [Feral Combat] Feral Charge (Spell 49377, Level 30)
+  [Feral Combat] Leader of the Pack (Spell 17007, Level 40)
+  [Feral Combat] Mangle (Spell 33917, Level 50)
+  [Feral Combat] Primal Gore (Spell 63503, Level 55)
+  [Feral Combat] Survival Instincts (Spell 61336, Level 20)
+  [Restoration] Nature's Swiftness (Spell 17116, Level 30)
+  [Restoration] Omen of Clarity (Spell 16864, Level 20)
+  [Restoration] Swiftmend (Spell 18562, Level 40)
+  [Restoration] Tree of Life (Spell 65139, Level 50)
+
+
+==============================================================================
+SECTION 4: AUTO-LEARNED CLASS SPELLS (10 new gems)
+From playercreateinfo_spell_custom. Not in trainers or talents.
+These are single-rank gems (stances, utility, etc.).
+==============================================================================
+
+Warrior (4)
+--------------------------------------------------
+  Berserker Stance (Spell 2458, Level 0)
+  Defensive Stance (Spell 71, Level 0)
+  Sunder Armor (Spell 7386, Level 0)
+  Taunt (Spell 355, Level 0)
+
+Paladin (1)
+--------------------------------------------------
+  Judgement of Light (Spell 20271, Level 0)
+
+Warlock (5)
+--------------------------------------------------
+  Inferno (Summon) (Spell 1122, Level 0)
+  Ritual of Doom (Spell 18540, Level 0)
+  Summon Felhunter (Summon) (Spell 691, Level 0)
+  Summon Succubus (Summon) (Spell 712, Level 0)
+  Summon Voidwalker (Summon) (Spell 697, Level 0)
+
+
+==============================================================================
+SECTION 5: QUEST REWARD SPELLS (0 new gems)
+From quest_template.RewardSpell. Not in trainers, talents, or auto.
+==============================================================================
+
+
+==============================================================================
+SECTION 6: SLA AUTO-LEARNED SPELLS (25 new gems)
+From SkillLineAbility.dbc class skill tabs. Not in any other source.
+==============================================================================
+
+Warrior (3)
+--------------------------------------------------
+  Safeguard (Rank 1) (Spell 46946, Level 0)
+  Second Wind (Rank 1) (Spell 29841, Level 0)
+  Trauma (Rank 1) (Spell 46856, Level 0)
+
+Paladin (3)
+--------------------------------------------------
+  Judgements of the Pure (Rank 1) (Spell 53655, Level 0)
+  Seal of Righteousness (Spell 20154, Level 0)
+  Vindication (Rank 1) (Spell 67, Level 0)
+
+Hunter (3)
+--------------------------------------------------
+  Explosive Trap Effect (Rank 1) (Spell 13812, Level 0)
+  Master Tactician (Rank 1) (Spell 34833, Level 0)
+  Rapid Killing (Rank 1) (Spell 35098, Level 0)
+
+Rogue (1)
+--------------------------------------------------
+  Unfair Advantage (Rank 1) (Spell 51675, Level 0)
+
+Priest (5)
+--------------------------------------------------
+  Blessed Recovery (Rank 1) (Spell 27813, Level 0)
+  Focused Casting (Rank 1) (Spell 14743, Level 0)
+  Focused Will (Rank 1) (Spell 45237, Level 0)
+  Lightwell Renew (Rank 1) (Spell 7001, Level 0)
+  Misery (Rank 1) (Spell 33196, Level 0)
+
+Death Knight (2)
+--------------------------------------------------
+  First Aid (Artisan) (Spell 10846, Level 0)
+  Journeyman Riding (Journeyman) (Spell 33391, Level 0)
+
+Shaman (3)
+--------------------------------------------------
+  Ancestral Fortitude (Rank 1) (Spell 16177, Level 0)
+  Elemental Devastation (Rank 2) (Spell 29177, Level 0)
+  Elemental Shields (Rank 1) (Spell 30669, Level 0)
+
+Mage (1)
+--------------------------------------------------
+  Chilled (Rank 1) (Spell 12484, Level 0)
+
+Warlock (1)
+--------------------------------------------------
+  Hellfire Effect (Rank 1) (Spell 5857, Level 0)
+
+Druid (3)
+--------------------------------------------------
+  Bear Form (Shapeshift) (Spell 5487, Level 0)
+  Pounce Bleed (Rank 1) (Spell 9007, Level 0)
+  Primal Fury (Rank 1) (Spell 16958, Level 0)
+
+
+==============================================================================
+SECTION 7: EXCLUDED SPELLS (205)
+Filtered out by exclusion config.
+==============================================================================
+
+Excluded trainer spells (41 unique names):
+--------------------------------------------------
+  Call Stabled Pet
+  Charger
+  Conjure Food
+  Conjure Mana Gem
+  Conjure Refreshment
+  Conjure Water
+  Create Firestone
+  Create Healthstone
+  Create Soulstone
+  Create Spellstone
+  Dreadsteed
+  Dual Wield
+  Mail
+  Parry
+  Plate Mail
+  Portal: Dalaran
+  Portal: Darnassus
+  Portal: Exodar
+  Portal: Ironforge
+  Portal: Orgrimmar
+  Portal: Shattrath
+  Portal: Silvermoon
+  Portal: Stonard
+  Portal: Stormwind
+  Portal: Theramore
+  Portal: Thunder Bluff
+  Portal: Undercity
+  Summon Charger
+  Summon Warhorse
+  Teleport: Dalaran
+  Teleport: Darnassus
+  Teleport: Exodar
+  Teleport: Ironforge
+  Teleport: Orgrimmar
+  Teleport: Shattrath
+  Teleport: Silvermoon
+  Teleport: Stonard
+  Teleport: Stormwind
+  Teleport: Theramore
+  Teleport: Thunder Bluff
+  Teleport: Undercity
+
+Excluded talent spells (24):
+--------------------------------------------------
+  [?/Cunning] Boar's Speed (Spell 19596)
+  [?/Cunning] Bullheaded (Spell 53490)
+  [?/Cunning] Carrion Feeder (Spell 54044)
+  [?/Cunning] Dash (Spell 61684)
+  [?/Cunning] Dive (Spell 23145)
+  [?/Cunning] Roar of Recovery (Spell 53517)
+  [?/Cunning] Roar of Sacrifice (Spell 53480)
+  [?/Cunning] Wolverine Bite (Spell 53508)
+  [?/Ferocity] Boar's Speed (Spell 19596)
+  [?/Ferocity] Call of the Wild (Spell 53434)
+  [?/Ferocity] Charge (Spell 61685)
+  [?/Ferocity] Dash (Spell 61684)
+  [?/Ferocity] Dive (Spell 23145)
+  [?/Ferocity] Heart of the Phoenix (Spell 55709)
+  [?/Ferocity] Lick Your Wounds (Spell 53426)
+  [?/Ferocity] Rabid (Spell 53401)
+  [?/Ferocity] Swoop (Spell 52825)
+  [?/Tenacity] Boar's Speed (Spell 19596)
+  [?/Tenacity] Charge (Spell 61685)
+  [?/Tenacity] Intervene (Spell 53476)
+  [?/Tenacity] Last Stand (Spell 53478)
+  [?/Tenacity] Roar of Sacrifice (Spell 53480)
+  [?/Tenacity] Taunt (Spell 53477)
+  [?/Tenacity] Thunderstomp (Spell 63900)
+
+Excluded auto-learned spells (33):
+--------------------------------------------------
+  [Death Knight] Acherus Deathcharger (Spell 48778)
+  [Paladin] Apprentice Riding (Spell 33388)
+  [Warlock] Apprentice Riding (Spell 33388)
+  [Hunter] Call Pet (Spell 883)
+  [Hunter] Call Stabled Pet (Spell 62757)
+  [Paladin] Charger (Spell 23214)
+  [Mage] Conjure Food (Spell 33717)
+  [Mage] Conjure Mana Gem (Spell 42985)
+  [Mage] Conjure Refreshment (Spell 42956)
+  [Mage] Conjure Water (Spell 27090)
+  [Warlock] Create Firestone (Spell 60220)
+  [Warlock] Create Healthstone (Spell 47878)
+  [Warlock] Create Soulstone (Spell 47884)
+  [Warlock] Create Spellstone (Spell 47888)
+  [Rogue] Detect Traps (Spell 2836)
+  [Hunter] Dismiss Pet (Spell 2641)
+  [Warlock] Dreadsteed (Spell 23161)
+  [Hunter] Feed Pet (Spell 6991)
+  [Druid] Feline Grace (Spell 20719)
+  [Warlock] Felsteed (Spell 5784)
+  [Warrior] Parry (Spell 3127)
+  [Paladin] Parry (Spell 3127)
+  [Hunter] Parry (Spell 3127)
+  [Rogue] Parry (Spell 3127)
+  [Shaman] Reincarnation (Spell 20608)
+  [Death Knight] Runeforging (Spell 53428)
+  [Rogue] Safe Fall (Spell 1860)
+  [Druid] Savage Defense (Spell 62600)
+  [Warrior] Stance Mastery (Spell 12678)
+  [Paladin] Summon Charger (Spell 34767)
+  [Paladin] Summon Warhorse (Spell 34769)
+  [Hunter] Tame Beast (Spell 1515)
+  [Paladin] Warhorse (Spell 13819)
+
+Excluded quest reward spells (8):
+--------------------------------------------------
+  Conjure Water (Spell 10143)
+  Runeforging (Spell 53431)
+  Summon Charger (Spell 23215)
+  Summon Charger (Spell 34766)
+  Summon Warhorse (Spell 13820)
+  Summon Warhorse (Spell 34768)
+  Tame Beast (Spell 1579)
+  Teleport: Dalaran (Spell 3578)
+
+Excluded SLA auto-learned spells (51):
+--------------------------------------------------
+  [Mage] Conjure Food (Spell 587)
+  [Mage] Conjure Food (Spell 597)
+  [Mage] Conjure Food (Spell 990)
+  [Mage] Conjure Food (Spell 6129)
+  [Mage] Conjure Food (Spell 10144)
+  [Mage] Conjure Food (Spell 10145)
+  [Mage] Conjure Food (Spell 28612)
+  [Mage] Conjure Food (Spell 33717)
+  [Mage] Conjure Mana Gem (Spell 759)
+  [Mage] Conjure Mana Gem (Spell 3552)
+  [Mage] Conjure Mana Gem (Spell 10053)
+  [Mage] Conjure Mana Gem (Spell 10054)
+  [Mage] Conjure Mana Gem (Spell 27101)
+  [Mage] Conjure Mana Gem (Spell 42985)
+  [Mage] Conjure Refreshment (Spell 42955)
+  [Mage] Conjure Refreshment (Spell 42956)
+  [Mage] Conjure Water (Spell 5504)
+  [Mage] Conjure Water (Spell 5505)
+  [Mage] Conjure Water (Spell 5506)
+  [Mage] Conjure Water (Spell 6127)
+  [Mage] Conjure Water (Spell 10138)
+  [Mage] Conjure Water (Spell 10139)
+  [Mage] Conjure Water (Spell 10140)
+  [Mage] Conjure Water (Spell 27090)
+  [Mage] Conjure Water (Spell 37420)
+  [Warlock] Create Firestone (Spell 6366)
+  [Warlock] Create Firestone (Spell 17951)
+  [Warlock] Create Firestone (Spell 17952)
+  [Warlock] Create Firestone (Spell 17953)
+  [Warlock] Create Firestone (Spell 27250)
+  [Warlock] Create Healthstone (Spell 6201)
+  [Warlock] Create Healthstone (Spell 6202)
+  [Warlock] Create Healthstone (Spell 5699)
+  [Warlock] Create Healthstone (Spell 11729)
+  [Warlock] Create Healthstone (Spell 11730)
+  [Warlock] Create Healthstone (Spell 27230)
+  [Warlock] Create Healthstone (Spell 47871)
+  [Warlock] Create Healthstone (Spell 47878)
+  [Warlock] Create Soulstone (Spell 693)
+  [Warlock] Create Soulstone (Spell 20752)
+  [Warlock] Create Soulstone (Spell 20755)
+  [Warlock] Create Soulstone (Spell 20756)
+  [Warlock] Create Soulstone (Spell 20757)
+  [Warlock] Create Soulstone (Spell 27238)
+  [Warlock] Create Soulstone (Spell 47884)
+  [Warlock] Create Spellstone (Spell 2362)
+  [Warlock] Create Spellstone (Spell 17727)
+  [Warlock] Create Spellstone (Spell 17728)
+  [Warlock] Create Spellstone (Spell 28172)
+  [Warlock] Create Spellstone (Spell 47886)
+  [Warlock] Create Spellstone (Spell 47888)

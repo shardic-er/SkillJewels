@@ -1,0 +1,489 @@
+SKILL JEWELS - SPELL DEPENDENCY ANALYSIS
+==============================================================================
+
+SUMMARY
+------------------------------------------------------------------------------
+Total gems analyzed:              607
+Gems with stance requirements:    56
+Gems transparent-only (no dep):  60
+Gems with reagent requirements:   29
+Gems with any dependency:         66
+Unique dependency definitions:    7
+Gem exclusion candidates:         6
+
+Transparent forms (filtered out): [2, 22, 28, 31, 32]
+  These forms mean "also usable in" not "requires".
+
+==============================================================================
+DISCOVERED SHAPESHIFT FORMS (used by gem spells)
+==============================================================================
+
+FormID   Bitmask      Spell    Name                           Class
+------   ----------   ------   ----                           -----
+1        0x00000001   768      Cat Form                       Druid
+5        0x00000010   5487     Bear Form                      Druid
+8        0x00000080   9634     Dire Bear Form                 Druid
+17       0x00010000   2457     Battle Stance                  Warrior
+18       0x00020000   71       Defensive Stance               Warrior
+19       0x00040000   2458     Berserker Stance               Warrior
+30       0x20000000   1784     Stealth                        Rogue
+
+==============================================================================
+DEPENDENCY DEFINITIONS
+==============================================================================
+
+  battle_stance [Warrior] (stance)
+    Forms: form 17 (0x00010000)
+    Chain: 2457 (lvl 0)
+
+  bear_form [Druid] (stance)
+    Forms: form 5 (0x00000010), form 8 (0x00000080)
+    Chain: 5487 (lvl 0) -> 9634 (lvl 0)
+
+  berserker_stance [Warrior] (stance)
+    Forms: form 19 (0x00040000)
+    Chain: 2458 (lvl 0)
+
+  cat_form [Druid] (stance)
+    Forms: form 1 (0x00000001)
+    Chain: 768 (lvl 0)
+
+  defensive_stance [Warrior] (stance)
+    Forms: form 18 (0x00020000)
+    Chain: 71 (lvl 0)
+
+  drain_soul [Warlock] (reagent_producer)
+    Produces: item 6265
+    Chain: 1120 (lvl 10) -> 8288 (lvl 24) -> 8289 (lvl 38) -> 11675 (lvl 52) -> 27217 (lvl 67) -> 47855 (lvl 77)
+
+  stealth [Rogue] (stance)
+    Forms: form 30 (0x20000000)
+    Chain: 1784 (lvl 0)
+
+==============================================================================
+STANCE DEPENDENCIES BY CLASS
+==============================================================================
+
+--- Warrior (23 gems with stance deps) ---
+
+  Charge (spell 100)
+    Stances: 0x00010000
+    Dependencies: battle_stance (form 17)
+
+  Disarm (spell 676)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Execute (spell 5308)
+    Stances: 0x00050000
+    Dependencies: battle_stance (form 17), berserker_stance (form 19)
+
+  Hamstring (spell 1715)
+    Stances: 0x00050000
+    Dependencies: battle_stance (form 17), berserker_stance (form 19)
+
+  Intercept (spell 20252)
+    Stances: 0x00040000
+    Dependencies: berserker_stance (form 19)
+
+  Intervene (spell 3411)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Mocking Blow (spell 694)
+    Stances: 0x00030000
+    Dependencies: battle_stance (form 17), defensive_stance (form 18)
+
+  Overpower (spell 7384)
+    Stances: 0x00010000
+    Dependencies: battle_stance (form 17)
+
+  Pummel (spell 6552)
+    Stances: 0x00040000
+    Dependencies: berserker_stance (form 19)
+
+  Recklessness (spell 1719)
+    Stances: 0x00040000
+    Dependencies: berserker_stance (form 19)
+
+  Rend (spell 772)
+    Stances: 0x00030000
+    Dependencies: battle_stance (form 17), defensive_stance (form 18)
+
+  Retaliation (spell 20230)
+    Stances: 0x00010000
+    Dependencies: battle_stance (form 17)
+
+  Revenge (spell 6572)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Shattering Throw (spell 64382)
+    Stances: 0x00010000
+    Dependencies: battle_stance (form 17)
+
+  Shield Bash (spell 72)
+    Stances: 0x00030000
+    Dependencies: battle_stance (form 17), defensive_stance (form 18)
+
+  Shield Block (spell 2565)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Shield Wall (spell 871)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Spell Reflection (spell 23920)
+    Stances: 0x00030000
+    Dependencies: battle_stance (form 17), defensive_stance (form 18)
+
+  Sweeping Strikes (spell 12328)
+    Stances: 0x00050000
+    Dependencies: battle_stance (form 17), berserker_stance (form 19)
+
+  Taunt (spell 355)
+    Stances: 0x00020000
+    Dependencies: defensive_stance (form 18)
+
+  Thunder Clap (spell 6343)
+    Stances: 0x00030000
+    Dependencies: battle_stance (form 17), defensive_stance (form 18)
+
+  Victory Rush (spell 34428)
+    Stances: 0x00050000
+    Dependencies: battle_stance (form 17), berserker_stance (form 19)
+
+  Whirlwind (spell 1680)
+    Stances: 0x00040000
+    Dependencies: berserker_stance (form 19)
+
+--- Rogue (7 gems with stance deps) ---
+
+  Ambush (spell 8676)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Cheap Shot (spell 1833)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Disarm Trap (spell 1842)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Garrote (spell 703)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Pick Pocket (spell 921)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Premeditation (spell 14183)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+  Sap (spell 6770)
+    Stances: 0x20000000
+    Dependencies: stealth (form 30)
+
+--- Druid (26 gems with stance deps) ---
+
+  Bash (spell 5211)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Challenging Roar (spell 5209)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Claw (spell 1082)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Cower (spell 8998)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Demoralizing Roar (spell 99)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Enrage (spell 5229)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Faerie Fire (Feral) (spell 16857)
+    Stances: 0x00000091
+    Dependencies: cat_form (form 1), bear_form (form 5), bear_form (form 8)
+
+  Feline Grace (spell 20719)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Ferocious Bite (spell 22568)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Frenzied Regeneration (spell 22842)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Lacerate (spell 33745)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Maim (spell 22570)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Mangle (Bear) (spell 33878)
+    Stances: 0x00000080
+    Dependencies: bear_form (form 8)
+
+  Mangle (Cat) (spell 33876)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Maul (spell 6807)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Nature's Grasp (spell 16689)
+    Stances: 0x00000091
+    Dependencies: cat_form (form 1), bear_form (form 5), bear_form (form 8)
+
+  Pounce (spell 9005)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Prowl (spell 5215)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Rake (spell 1822)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Ravage (spell 6785)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Rip (spell 1079)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Savage Defense (spell 62600)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Shred (spell 5221)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Swipe (Bear) (spell 779)
+    Stances: 0x00000090
+    Dependencies: bear_form (form 5), bear_form (form 8)
+
+  Swipe (Cat) (spell 62078)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+  Tiger's Fury (spell 5217)
+    Stances: 0x00000001
+    Dependencies: cat_form (form 1)
+
+==============================================================================
+REAGENT DEPENDENCIES
+==============================================================================
+
+  Arcane Brilliance [Mage] (spell 23028)
+    Reagent: Arcane Powder x1 -> vendor item (no spell dep)
+
+  Divine Intervention [Paladin] (spell 19752)
+    Reagent: Symbol of Divinity x1 -> vendor item (no spell dep)
+
+  Enslave Demon [Warlock] (spell 1098)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Gift of the Wild [Druid] (spell 21849)
+    Reagent: Wild Berries x1 -> vendor item (no spell dep)
+
+  Greater Blessing of Kings [Paladin] (spell 25898)
+    Reagent: Symbol of Kings x1 -> vendor item (no spell dep)
+
+  Greater Blessing of Might [Paladin] (spell 25782)
+    Reagent: Symbol of Kings x1 -> vendor item (no spell dep)
+
+  Greater Blessing of Sanctuary [Paladin] (spell 25899)
+    Reagent: Symbol of Kings x1 -> vendor item (no spell dep)
+
+  Greater Blessing of Wisdom [Paladin] (spell 25894)
+    Reagent: Symbol of Kings x1 -> vendor item (no spell dep)
+
+  Inferno [Warlock] (spell 1122)
+    Reagent: Infernal Stone x1 -> vendor item (no spell dep)
+
+  Levitate [Priest] (spell 1706)
+    Reagent: Light Feather x1 -> vendor item (no spell dep)
+
+  Prayer of Fortitude [Priest] (spell 21562)
+    Reagent: Holy Candle x1 -> vendor item (no spell dep)
+
+  Prayer of Shadow Protection [Priest] (spell 27683)
+    Reagent: Sacred Candle x1 -> vendor item (no spell dep)
+
+  Prayer of Spirit [Priest] (spell 27681)
+    Reagent: Sacred Candle x1 -> vendor item (no spell dep)
+
+  Rebirth [Druid] (spell 20484)
+    Reagent: Maple Seed x1 -> vendor item (no spell dep)
+
+  Reincarnation [Shaman] (spell 20608)
+    Reagent: Ankh x1 -> vendor item (no spell dep)
+
+  Ritual of Doom [Warlock] (spell 18540)
+    Reagent: Demonic Figurine x1 -> vendor item (no spell dep)
+
+  Ritual of Refreshment [Mage] (spell 43987)
+    Reagent: Arcane Powder x2 -> vendor item (no spell dep)
+
+  Ritual of Souls [Warlock] (spell 29893)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Ritual of Summoning [Warlock] (spell 698)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Shadowburn [Warlock] (spell 17877)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Slow Fall [Mage] (spell 130)
+    Reagent: Light Feather x1 -> vendor item (no spell dep)
+
+  Soul Fire [Warlock] (spell 6353)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Soulshatter [Warlock] (spell 29858)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Summon Felguard [Warlock] (spell 30146)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Summon Felhunter [Warlock] (spell 691)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Summon Succubus [Warlock] (spell 712)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Summon Voidwalker [Warlock] (spell 697)
+    Reagent: Soul Shard x1 -> drain_soul
+
+  Water Breathing [Shaman] (spell 131)
+    Reagent: Shiny Fish Scales x1 -> vendor item (no spell dep)
+
+  Water Walking [Shaman] (spell 546)
+    Reagent: Fish Oil x1 -> vendor item (no spell dep)
+
+==============================================================================
+GEM EXCLUSION CANDIDATES
+These gems in gem_data.yaml are also dependency spells.
+They may be redundant since they are auto-granted as dependencies.
+==============================================================================
+
+  Berserker Stance
+    Provides: berserker_stance
+    Needed by: 8 gem(s)
+    Examples: Execute, Hamstring, Intercept, Pummel, Recklessness, Victory Rush, Whirlwind, Sweeping Strikes
+
+  Cat Form
+    Provides: cat_form
+    Needed by: 16 gem(s)
+    Examples: Claw, Cower, Faerie Fire (Feral), Feline Grace, Ferocious Bite, Maim, Mangle (Cat), Nature's Grasp, Pounce, Prowl
+
+  Defensive Stance
+    Provides: defensive_stance
+    Needed by: 11 gem(s)
+    Examples: Disarm, Intervene, Mocking Blow, Rend, Revenge, Shield Bash, Shield Block, Shield Wall, Spell Reflection, Thunder Clap
+
+  Dire Bear Form
+    Provides: bear_form
+    Needed by: 12 gem(s)
+    Examples: Bash, Challenging Roar, Demoralizing Roar, Enrage, Faerie Fire (Feral), Frenzied Regeneration, Lacerate, Mangle (Bear), Maul, Nature's Grasp
+
+  Drain Soul
+    Provides: drain_soul
+    Needed by: 10 gem(s)
+    Examples: Enslave Demon, Ritual of Souls, Ritual of Summoning, Shadowburn, Soul Fire, Soulshatter, Summon Felguard, Summon Felhunter, Summon Succubus, Summon Voidwalker
+
+  Stealth
+    Provides: stealth
+    Needed by: 7 gem(s)
+    Examples: Ambush, Cheap Shot, Disarm Trap, Garrote, Pick Pocket, Sap, Premeditation
+
+==============================================================================
+TRANSPARENT-ONLY STANCE GEMS (60)
+These gems have Stances bits set but ONLY for transparent forms.
+No dependency needed -- the spells work without the form active.
+==============================================================================
+
+  Binding Heal (spell 32546, Stances=0x80000000) -> TEST AVATAR FORM
+  Circle of Healing (spell 34861, Stances=0x80000000) -> TEST AVATAR FORM
+  Devouring Plague (spell 2944, Stances=0x08000000) -> Shadowform
+  Dispel Magic (spell 527, Stances=0x08000000) -> Shadowform
+  Divine Hymn (spell 64843, Stances=0x80000000) -> TEST AVATAR FORM
+  Divine Spirit (spell 14752, Stances=0x08000000) -> Shadowform
+  Fade (spell 586, Stances=0x08000000) -> Shadowform
+  Faerie Fire (spell 770, Stances=0x40000000) -> Spirit Shade Visual
+  Flash Heal (spell 2061, Stances=0x80000000) -> TEST AVATAR FORM
+  Force of Nature (spell 33831, Stances=0x40000000) -> Spirit Shade Visual
+  Greater Heal (spell 2060, Stances=0x80000000) -> TEST AVATAR FORM
+  Guardian Spirit (spell 47788, Stances=0x88000000) -> Shadowform, TEST AVATAR FORM
+  Heal (spell 2054, Stances=0x80000000) -> TEST AVATAR FORM
+  Hibernate (spell 2637, Stances=0x40000000) -> Spirit Shade Visual
+  Hurricane (spell 16914, Stances=0x40000000) -> Spirit Shade Visual
+  Inferno (spell 1122, Stances=0x00200000) -> Metamorphosis
+  Inner Fire (spell 588, Stances=0x08000000) -> Shadowform
+  Inner Focus (spell 14751, Stances=0x08000000) -> Shadowform
+  Innervate (spell 29166, Stances=0x40000002) -> Tree of Life, Spirit Shade Visual
+  Insect Swarm (spell 5570, Stances=0x40000000) -> Spirit Shade Visual
+  Lesser Heal (spell 2050, Stances=0x80000000) -> TEST AVATAR FORM
+  Levitate (spell 1706, Stances=0x08000000) -> Shadowform
+  Lifebloom (spell 33763, Stances=0x00000002) -> Tree of Life
+  Lightwell (spell 724, Stances=0x80000000) -> TEST AVATAR FORM
+  Mana Burn (spell 8129, Stances=0x08000000) -> Shadowform
+  Mass Dispel (spell 32375, Stances=0x08000000) -> Shadowform
+  Mind Blast (spell 8092, Stances=0x08000000) -> Shadowform
+  Mind Control (spell 605, Stances=0x08000000) -> Shadowform
+  Mind Flay (spell 15407, Stances=0x08000000) -> Shadowform
+  Mind Sear (spell 48045, Stances=0x08000000) -> Shadowform
+  Mind Soothe (spell 453, Stances=0x08000000) -> Shadowform
+  Mind Vision (spell 2096, Stances=0x08000000) -> Shadowform
+  Moonfire (spell 8921, Stances=0x40000000) -> Spirit Shade Visual
+  Power Word: Fortitude (spell 1243, Stances=0x08000000) -> Shadowform
+  Power Word: Shield (spell 17, Stances=0x08000000) -> Shadowform
+  Prayer of Fortitude (spell 21562, Stances=0x08000000) -> Shadowform
+  Prayer of Healing (spell 596, Stances=0x80000000) -> TEST AVATAR FORM
+  Prayer of Mending (spell 33076, Stances=0x80000000) -> TEST AVATAR FORM
+  Prayer of Shadow Protection (spell 27683, Stances=0x08000000) -> Shadowform
+  Prayer of Spirit (spell 27681, Stances=0x08000000) -> Shadowform
+  Psychic Scream (spell 8122, Stances=0x08000000) -> Shadowform
+  Regrowth (spell 8936, Stances=0x00000002) -> Tree of Life
+  Rejuvenation (spell 774, Stances=0x00000002) -> Tree of Life
+  Renew (spell 139, Stances=0x80000000) -> TEST AVATAR FORM
+  Sense Demons (spell 5500, Stances=0x00200000) -> Metamorphosis
+  Shackle Undead (spell 9484, Stances=0x08000000) -> Shadowform
+  Shadow Protection (spell 976, Stances=0x08000000) -> Shadowform
+  Shadow Word: Death (spell 32379, Stances=0x08000000) -> Shadowform
+  Shadow Word: Pain (spell 589, Stances=0x08000000) -> Shadowform
+  Shadowfiend (spell 34433, Stances=0x08000000) -> Shadowform
+  Silence (spell 15487, Stances=0x08000000) -> Shadowform
+  Soothe Animal (spell 2908, Stances=0x40000000) -> Spirit Shade Visual
+  Starfall (spell 48505, Stances=0x40000000) -> Spirit Shade Visual
+  Starfire (spell 2912, Stances=0x40000000) -> Spirit Shade Visual
+  Swiftmend (spell 18562, Stances=0x00000002) -> Tree of Life
+  Thorns (spell 467, Stances=0x40000000) -> Spirit Shade Visual
+  Tranquility (spell 740, Stances=0x00000002) -> Tree of Life
+  Typhoon (spell 50516, Stances=0x40000000) -> Spirit Shade Visual
+  Wild Growth (spell 48438, Stances=0x80000000) -> TEST AVATAR FORM
+  Wrath (spell 5176, Stances=0x40000000) -> Spirit Shade Visual

@@ -3016,10 +3016,6 @@ local GEM_SPELLS = {
         {spell = 8696, level = 34},
         {spell = 11305, level = 58},
     },
-    [5528] = {
-        class = 1,  -- Warrior
-        {spell = 12678, level = 20},
-    },
     [5529] = {
         class = 11,  -- Druid
         {spell = 48505, level = 60},
@@ -3161,42 +3157,6 @@ local GEM_SPELLS = {
     [5554] = {
         class = 7,  -- Shaman
         {spell = 36936, level = 30},
-    },
-    [5556] = {
-        class = 3,  -- Hunter
-        {spell = 1494, level = 2},
-    },
-    [5557] = {
-        class = 3,  -- Hunter
-        {spell = 19878, level = 32},
-    },
-    [5558] = {
-        class = 3,  -- Hunter
-        {spell = 19879, level = 50},
-    },
-    [5559] = {
-        class = 3,  -- Hunter
-        {spell = 19880, level = 26},
-    },
-    [5560] = {
-        class = 3,  -- Hunter
-        {spell = 19882, level = 40},
-    },
-    [5561] = {
-        class = 3,  -- Hunter
-        {spell = 19885, level = 24},
-    },
-    [5642] = {
-        class = 11,  -- Druid
-        {spell = 5225, level = 32},
-    },
-    [5643] = {
-        class = 3,  -- Hunter
-        {spell = 19883, level = 10},
-    },
-    [5563] = {
-        class = 3,  -- Hunter
-        {spell = 19884, level = 18},
     },
     [5564] = {
         class = 11,  -- Druid
@@ -3914,6 +3874,7 @@ local GEM_SPELLS = {
 -- Multi-spell gems: teach ALL listed spells simultaneously
 local GEM_MULTI_SPELLS = {
     [5600] = {class = 3, 883, 1515, 2641, 6991, 62757},  -- Hunter
+    [5647] = {class = 3, 1494, 19883, 19884, 19885, 19880, 19878, 19879, 19882},  -- Hunter
     [5614] = {class = 9, 59672, 50589, 54785, 59671, 50581},  -- Warlock
 }
 
@@ -4320,7 +4281,6 @@ local GEM_ITEMS = {
     [100544] = 5524,
     [100543] = 5523,
     [100547] = 5527,
-    [100548] = 5528,
     [100549] = 5529,
     [100550] = 5530,
     [100551] = 5531,
@@ -4338,15 +4298,6 @@ local GEM_ITEMS = {
     [100572] = 5552,
     [100575] = 5555,
     [100574] = 5554,
-    [100576] = 5556,
-    [100577] = 5557,
-    [100578] = 5558,
-    [100579] = 5559,
-    [100580] = 5560,
-    [100581] = 5561,
-    [100662] = 5642,
-    [100663] = 5643,
-    [100583] = 5563,
     [100584] = 5564,
     [100585] = 5565,
     [100586] = 5566,
@@ -4511,6 +4462,7 @@ local GEM_ITEMS = {
     [100558] = 5538,
     [100566] = 5546,
     [100620] = 5600,
+    [100666] = 5647,
     [100634] = 5614,
 }
 
@@ -4717,9 +4669,6 @@ local GEM_DEPS = {
         { {spell = 71, level = 0} },
     },
     [5552] = {
-        { {spell = 768, level = 0} },
-    },
-    [5642] = {
         { {spell = 768, level = 0} },
     },
     [5582] = {

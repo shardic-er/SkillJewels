@@ -1,9 +1,30 @@
 -- =============================================================================
 -- World of Stonecraft
--- Version: 0.1.296
+-- Version: 0.1.313
 -- Author: Go
--- Generated: 2026-02-26T14:48:22.944313
+-- Generated: 2026-02-26T20:27:44.991007
 -- =============================================================================
+
+
+-- ---------------------------------------------------------------------------
+-- Source: content\SkillJewels\add_socket_spell.sql
+-- ---------------------------------------------------------------------------
+
+-- =============================================================================
+-- ADD SOCKET SPELL
+-- =============================================================================
+-- Castable spell that adds a prismatic socket to any equippable item.
+-- Cloned from Eternal Belt Buckle (spell 55655, enchantment 3729) with
+-- the belt-only restriction removed.
+-- GM command: .gemsocket (teaches to targeted player or self)
+-- =============================================================================
+
+-- Prismatic socket enchantment (clone of vanilla 3729 "Socket Belt")
+
+-- Castable spell: targets any equippable item, applies prismatic socket
+-- Effect 156 = enchant_item_prismatic (prismatic slot 6)
+
+
 
 
 -- ---------------------------------------------------------------------------
@@ -42,6 +63,44 @@ INSERT INTO item_template (
     5599
 );
 
+
+
+
+-- ---------------------------------------------------------------------------
+-- Source: content\SkillJewels\hunter_tracking.sql
+-- ---------------------------------------------------------------------------
+
+-- =============================================================================
+-- SKILL JEWEL: Tracking (manual, legendary)
+-- =============================================================================
+-- A single gem that teaches all hunter tracking spells.
+-- Legendary quality (orange), inv_jewelcrafting_gem_02.
+-- Lua handling: scripts/skill_jewels.lua has special multi-spell logic for this.
+-- =============================================================================
+
+
+
+INSERT INTO item_template (
+    entry, name, description,
+    class, subclass, Quality,
+    displayid, stackable, bonding,
+    BuyPrice, SellPrice,
+    RequiredLevel,
+    GemProperties
+) VALUES (
+    100666,
+    'Skill Jewel: Tracking',
+    '',
+    3, 8,
+    5,
+    70008,
+    1,
+    1,
+    0,
+    0,
+    0,
+    5645
+);
 
 
 
@@ -9279,29 +9338,6 @@ INSERT INTO item_template (
     5526
 );
 
--- Stance Mastery (trainer, Warrior)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100548,
-    'Skill Jewel: Stance Mastery',
-    '',
-    3, 8,
-    3,
-    70029,
-    1,
-    1,
-    0,
-    0,
-    20,
-    5527
-);
-
 -- Starfall (talent, Druid)
 INSERT INTO item_template (
     entry, name, description,
@@ -9691,213 +9727,6 @@ INSERT INTO item_template (
     0,
     30,
     5553
-);
-
--- Track Beasts (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100576,
-    'Skill Jewel: Track Beasts',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    2,
-    5555
-);
-
--- Track Demons (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100577,
-    'Skill Jewel: Track Demons',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    32,
-    5556
-);
-
--- Track Dragonkin (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100578,
-    'Skill Jewel: Track Dragonkin',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    50,
-    5557
-);
-
--- Track Elementals (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100579,
-    'Skill Jewel: Track Elementals',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    26,
-    5558
-);
-
--- Track Giants (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100580,
-    'Skill Jewel: Track Giants',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    40,
-    5559
-);
-
--- Track Hidden (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100581,
-    'Skill Jewel: Track Hidden',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    24,
-    5560
-);
-
--- Track Humanoids (Druid) (trainer, Druid)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100662,
-    'Skill Jewel: Track Humanoids (Druid)',
-    '',
-    3, 8,
-    3,
-    70004,
-    1,
-    1,
-    0,
-    0,
-    32,
-    5641
-);
-
--- Track Humanoids (Hunter) (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100663,
-    'Skill Jewel: Track Humanoids (Hunter)',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    10,
-    5642
-);
-
--- Track Undead (trainer, Hunter)
-INSERT INTO item_template (
-    entry, name, description,
-    class, subclass, Quality,
-    displayid, stackable, bonding,
-    BuyPrice, SellPrice,
-    RequiredLevel,
-    GemProperties
-) VALUES (
-    100583,
-    'Skill Jewel: Track Undead',
-    '',
-    3, 8,
-    3,
-    70008,
-    1,
-    1,
-    0,
-    0,
-    18,
-    5562
 );
 
 -- Tranquility (trainer, Druid)
